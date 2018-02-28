@@ -1,0 +1,82 @@
+body {
+  background: black;
+}
+
+h1, main {
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: Terminal, monospace;
+  color: lime;
+}
+
+.title, p {
+  text-align: center;
+  font-family: Terminal, monospace;
+  color: lime;
+}
+
+button {
+  font-family: Terminal, monospace;
+  color: lime;
+  background: black;
+  border: 2px solid lime;
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+button:hover, 
+button:focus {
+  color: red;
+  border-color: red;
+}
+
+button::before {
+  content: "> ";
+}
+
+img {
+  max-width: 100%;
+}
+
+.empty {
+  opacity: 0;
+}
+
+/*avoids wide vertical space between answers on mobile*/
+.answer, .empty {
+  margin-top: -5px;
+}
+
+/*put score counter on bottom when on mobile*/
+.score-counter {
+  position: fixed;
+  background: #111111;
+  bottom: 0;
+  left: 0;
+}
+
+/*for users with shorter screens, in case score element covers up last answer*/
+form {
+  margin-bottom: 50px
+}
+
+@media only screen and (min-width: 640px) {
+  p, button {
+    margin-top: 20px;
+  }
+  .answer, .empty {
+    margin-top: 20px;
+  }
+  .score-counter {
+    position: static;
+    background: none;
+  }
+  .question-counter, 
+  .score-counter {
+    margin-top: 15px;
+  }
+}
