@@ -175,7 +175,7 @@ function loadQuiz() {
   function newGame() {
     console.log("New game started");
     questionCreator();
-    const titlePage = new Page('MR. ROBOT QUIZ', ["https://psmag.com/.image/c_limit%2Ccs_srgb%2Cq_80%2Cw_960/MTUxNzI3ODczNDU4MTg1NDAw/robot.webp", "Rami Malek as Elliot"], "What I\'m about to tell you is top secret...", "node start-qu1z.js");
+    const titlePage = new Page('MR. ROBOT QUIZ', ["./rami-malek.png", "Rami Malek as Elliot"], "What I\'m about to tell you is top secret...", "node start-qu1z.js");
     renderPage(titlePage.title, titlePage.img, titlePage.paragraph, titlePage.button);
   }
   
